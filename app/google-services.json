@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "931653180566",
+    "project_id": "tqtquizz",
+    "storage_bucket": "tqtquizz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931653180566:android:56fe489f800382bd93f6b7",
+        "android_client_info": {
+          "package_name": "com.example.tqt_quizz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8fzSMO_Il3bwAiuPTRKGdq6n-Zf-ysY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
