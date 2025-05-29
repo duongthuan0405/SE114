@@ -10,8 +10,9 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        var ConnStr = builder.Configuration.GetConnectionString("Conn");
-        Console.WriteLine(ConnStr ?? "null");
+        // Get ConnStr from appsettings.json
+        var ConnStr = builder.Configuration.GetConnectionString("ConnStr");
+
         builder.Services.AddDbContext<MyAppDBContext>(options =>
             options.UseSqlServer(ConnStr)
         );
@@ -46,7 +47,7 @@ public class Program
 
         app.MapGet("/weatherforecast", (HttpContext httpContext) =>
         {
-            var forecast =  Enumerable.Range(1, 5).Select(index =>
+            var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
                 {
                     Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -60,6 +61,7 @@ public class Program
 
         app.MapControllers();
 
+        Console.WriteLine(ConnStr ?? "ConnStr is null");
         app.Run();
     }
 }
