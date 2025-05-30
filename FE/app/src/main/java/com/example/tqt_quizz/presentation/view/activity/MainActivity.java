@@ -1,4 +1,4 @@
-package com.example.tqt_quizz.presentation.view;
+package com.example.tqt_quizz.presentation.view.activity;
 
 import android.os.Bundle;
 
